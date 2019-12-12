@@ -1,0 +1,42 @@
+@import "config";
+
+.row1 {
+  background-image: url("../img/petimage3.jpeg");
+  background-size: cover;
+  .container {
+    background-color: rgba(0, 0, 0, 0.719);
+    height: 80vh;
+    color: white;
+    padding: 20px 7%;
+
+    header {
+      span.logo {
+        font-size: 25px;
+
+        i {
+          color: $brand_color;
+          font-size: 50px;
+        }
+      }
+      nav {
+        text-align: right;
+        float: right;
+        padding: 10px 0;
+
+        a {
+          margin-left: 30px;
+          color: $brand_color;
+          font-size: 16px;
+        }
+        a:hover {
+          border-bottom: 1px solid white;
+        }
+      }
+      nav::after {
+        content: "";
+        clear: both;
+      }
+    }
+    
+  }
+}
