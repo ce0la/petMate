@@ -3,7 +3,11 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 a {
@@ -12,6 +16,7 @@ a {
 
 a:hover {
   text-decoration: none;
+  opacity: .4;
 }
 
 .row1 {
@@ -20,39 +25,213 @@ a:hover {
 }
 
 .row1 .container {
-  background-color: rgba(0, 0, 0, 0.719);
-  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.815);
   color: white;
-  padding: 20px 7%;
 }
 
-.row1 .container header span.logo {
-  font-size: 25px;
+.row1 .container header {
+  background-color: white;
+  color: #05CCCC;
+  padding: 20px;
+}
+
+.row1 .container header #navButton {
+  display: inline-block;
+  width: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.row1 .container header #navButton .stick {
+  height: 3px;
+  margin-top: 5px;
+  background-color: #05CCCC;
 }
 
 .row1 .container header span.logo i {
+  font-size: 30px;
+}
+
+.row1 .container header span.logo a {
   color: #05CCCC;
-  font-size: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.row1 .container header span.search {
+  float: right;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.row1 .container header span.search i {
+  font-size: 25px;
+  font-weight: lighter;
 }
 
 .row1 .container header nav {
-  text-align: right;
-  float: right;
-  padding: 10px 0;
+  display: none;
+  padding-top: 20px;
 }
 
 .row1 .container header nav a {
-  margin-left: 30px;
   color: #05CCCC;
-  font-size: 16px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: block;
 }
 
-.row1 .container header nav a:hover {
-  border-bottom: 1px solid white;
+.row1 .container .row--1 {
+  padding: 0 7%;
+  padding-bottom: 50px;
+  margin: 100px 0 30px 0;
+  width: 100%;
+  text-align: center;
 }
 
-.row1 .container header nav::after {
-  content: "";
+.row1 .container .row--1 h3 {
+  font-weight: bold;
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.row1 .container .row--1 p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.row1 .container .row--1 h4 {
+  width: 100%;
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.row1 .container .row--1 p.link {
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+}
+
+.row1 .container .row--1 p.link img {
+  position: absolute;
+  display: none;
+  top: -50px;
+  left: 10%;
+}
+
+.row1 .container .row--1 p.link a {
+  background-color: #05CCCC;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  border-radius: 5px;
+  padding: 10px 0px;
+  margin: 0 auto;
+  display: inline-block;
+  width: 120px;
+}
+
+.row2 {
+  padding: 20px 0;
+  color: #05CCCC;
+}
+
+.row2 .mobile {
+  margin: 5px 0 20px 0;
+  padding: 0 20px;
+}
+
+.row2 .mobile h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: black;
+}
+
+.row2 .mobile p {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.row2 .mobile a {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  float: right;
+  margin-bottom: 10px;
+}
+
+.row2 .desktop {
+  display: none;
+  padding: 0 20px;
+}
+
+.row2 .pets {
   clear: both;
+}
+
+.row2 .pets article {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.row2 .pets article img.pet_img {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #05CCCC;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.row2 .pets article .p_details {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.row2 .pets article .p_details h5 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.row2 .pets article .p_details p {
+  font-weight: normal;
+  font-size: 18px;
+  color: #c4c4c4;
+  margin: 5px 0;
+}
+
+.row2 .pets article .p_details span {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.row2 p.more_pets {
+  text-align: center;
+  margin: 50px 0;
+  display: none;
+}
+
+.row2 p.more_pets a {
+  background-color: #05CCCC;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=main.css.map */
