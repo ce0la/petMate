@@ -1,0 +1,20 @@
+{
+  "name": "petmate",
+  "version": "1.0.0",
+  "description": "https://www.figma.com/file/PEy1imn5YUJRQd0Rr2ProF/slack-challenge-mobile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -w css/sass/pet-preview.scss -o ./css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ebugo/petMate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ebugo/petMate/issues"
+  },
+  "homepage": "https://github.com/Ebugo/petMate#readme"
+}
