@@ -9,3 +9,13 @@ navButton.addEventListener("click", ()=>{
       navbar.style.display = "";
   }
 })
+
+let petsContainer = document.querySelectorAll('section.pets article');
+petsContainer.forEach(pets=>{
+    pets.addEventListener('click', ()=>{
+    let imgSrc = pets.children[0].src;
+    console.log(imgSrc);
+    localStorage.setItem('pet', imgSrc);
+    location.replace('pet-preview.html')
+  });
+})

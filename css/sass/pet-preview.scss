@@ -1,0 +1,117 @@
+@import 'config';
+
+.row1 {
+    // background-image: url("../img/petimage3.jpeg");
+    // background-size: cover;
+  
+    .container {
+    //   background-color: rgba(0, 0, 0, 0.815);
+      color: white;
+  
+      header {
+        background-color: white;
+        color: $brand_color;
+        padding: 20px 7%;
+  
+        #navButton {
+          display: inline-block;
+          width: 30px;
+          margin-right: 20px;
+          cursor: pointer;
+  
+          .stick {
+            height: 3px;
+            margin-top: 5px;
+            background-color: $brand_color;
+          }
+        }
+        span.logo {
+          i {
+            font-size: 30px;
+          }
+          a {
+            color: $brand_color;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 29px;
+          }
+        }
+  
+        span.search {
+          float: right;
+          margin-top: 5px;
+          cursor: pointer;
+          i {
+            font-size: 25px;
+            font-weight: lighter;
+          }
+        }
+        nav {
+          display: none;
+          padding-top: 20px;
+  
+          a {
+            color: $brand_color;
+            font-size: 20px;
+            margin-bottom: 10px;
+            display: block;
+          }
+        }
+      }
+  
+      .row-2 {
+        width: 100%;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          // height: 100%;
+          width: 500px;
+        }
+      }
+    }
+}
+
+.row2 {
+  font-weight: 500;
+  font-size: 20px;
+  padding: 50px 50px;
+  .title {
+    color: rgb(138, 136, 136);
+  }
+  #btn-cont {
+    padding: 50px 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    background-color: $brand_color;
+    color: white;
+    line-height: 27px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 200px;
+    display: inline-block;
+  }
+}
+
+  @media only screen and (max-width:648px){
+    .row1 .container .row-2 img {
+      height: auto;
+      width: 100%;
+    }
+    .row2 {
+      a {
+        width: 80%;
+      }
+      #btn-cont {
+      justify-content: center;
+      align-items: center;
+      }
+    }
+  }
