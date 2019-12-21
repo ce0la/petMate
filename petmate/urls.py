@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+import petlisting.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('', petlisting.views.index, name='index'),
+    path('', petlisting.views.about, name='about'),
+    path('', petlisting.views.contact, name='contact')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
