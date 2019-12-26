@@ -25,4 +25,4 @@
 /vendors/*
 
 # SASS files
-/css/sass/*
+css/sass/*
