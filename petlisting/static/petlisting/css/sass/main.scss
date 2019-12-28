@@ -1,0 +1,287 @@
+@import "config";
+
+.row1 {
+  background-image: url("../img/petimage3.jpeg");
+  background-size: cover;
+
+  .container {
+    background-color: rgba(0, 0, 0, 0.815);
+    color: white;
+
+    header {
+      background-color: white;
+      color: $brand_color;
+      padding: 20px 7%;
+
+      #navButton {
+        display: inline-block;
+        width: 30px;
+        margin-right: 20px;
+        cursor: pointer;
+
+        .stick {
+          height: 3px;
+          margin-top: 5px;
+          background-color: $brand_color;
+        }
+      }
+      span.logo {
+        i {
+          font-size: 30px;
+        }
+        a {
+          color: $brand_color;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 29px;
+        }
+      }
+
+      span.search {
+        float: right;
+        margin-top: 5px;
+        cursor: pointer;
+        i {
+          font-size: 25px;
+          font-weight: lighter;
+        }
+      }
+      nav {
+        display: none;
+        padding-top: 20px;
+
+        a {
+          color: $brand_color;
+          font-size: 20px;
+          margin-bottom: 10px;
+          display: block;
+        }
+      }
+    }
+
+    .row--1 {
+      padding: 0 7%;
+      padding-bottom: 50px;
+      margin: 100px 0 30px 0;
+      width: 100%;
+      text-align: center;
+
+      h3 {
+        font-weight: bold;
+        font-size: 50px;
+        margin: 20px 0;
+      }
+      p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+      }
+      h4 {
+        width: 100%;
+        font-weight: 600;
+        font-size: 25px;
+        margin-top: 20px;
+      }
+
+      p.link {
+        text-align: center;
+        margin-top: 30px;
+        position: relative;
+        img {
+          display: none;
+        }
+        a {
+          background-color: $brand_color;
+          color: white;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 27px;
+          border-radius: 5px;
+          padding: 10px 0px;
+          margin: 0 auto;
+          display: inline-block;
+          width: 120px;
+        }
+      }
+    }
+  }
+}
+
+.row2 {
+  padding: 20px 0;
+  color: $brand_color;
+
+  .mobile {
+    margin: 5px 0 20px 0;
+    padding: 0 20px;
+    h3 {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 30px;
+      color: black;
+    }
+    p {
+      font-weight: 500;
+      font-size: 15px;
+    }
+    a {
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 15px;
+      float: right;
+      margin-bottom: 10px;
+    }
+  }
+  .desktop {
+    display: none;
+  }
+
+  .pets {
+    clear: both;
+    article {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #e5e5e5;
+      img.pet_img {
+        width: 80px;
+        height: 80px;
+        border: 3px solid $brand_color;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .p_details {
+        display: inline-block;
+        margin-left: 20px;
+        h5 {
+          font-weight: 500;
+          font-size: 20px;
+        }
+        p {
+          font-weight: normal;
+          font-size: 18px;
+          color: #c4c4c4;
+          margin: 5px 0;
+        }
+        span {
+          font-weight: 500;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  p.more_pets {
+    text-align: center;
+    margin: 50px 0;
+    display: none;
+
+    a {
+      background-color: $brand_color;
+      color: white;
+      padding: 10px 30px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 27px;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 760px) {
+  header {
+    background-color: transparent !important;
+
+    .logo {
+      a {
+        color: white !important;
+        font-size: 30px !important;
+      }
+    }
+    #navButton,
+    .search {
+      display: none !important;
+    }
+
+    #nav {
+      display: block;
+      float: right;
+      padding-top: 10px;
+
+      a {
+        display: inline-block !important;
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .row--1 {
+    width: 760px !important;
+    text-align: left !important;
+
+    h3 {
+      font-size: 100px !important;
+    }
+    p {
+      font-size: 29px !important;
+      line-height: 50px !important;
+    }
+    h4 {
+      width: 500px !important;
+      text-align: center;
+      font-size: 40px !important;
+    }
+    p.link {
+      img {
+        display: block !important;
+        position: absolute;
+        top: -50px;
+        left: 40px;
+      }
+      a {
+        margin-left: -33% !important;
+      }
+    }
+  }
+
+  .row2 {
+    padding: 0 7%;
+    .mobile {
+      display: none !important;
+    }
+    .desktop {
+      display: block !important;
+      font-size: 50px !important;
+      line-height: 59px !important;
+    }
+
+    .pets {
+      article {
+        display: inline-block;
+        border: none;
+        text-align: center;
+        width: 250px;
+        padding-left: 0 !important;
+        img.pet_img {
+          width: 180px;
+          height: 180px;
+        }
+        .p_details {
+        display: block !important;
+
+        h5 {
+          font-size: 25px !important;
+        }
+      }
+      }
+
+    
+    }
+
+    .more_pets {
+      display: block !important;
+    }
+  }
+}

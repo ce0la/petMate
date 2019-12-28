@@ -2,10 +2,10 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'petlisting/index.html')
+    return render(request, 'index.html')
 
-def about(request):
-    return render(request, 'petlisting/about.html')
+def petdetails(request):
+    return render(request, 'petdetails.html')
 
-def contact(request):
-    return render(request, 'petlisting/contact.html')
+def petpreview(request):
+    return render(request, 'petpreview.html')

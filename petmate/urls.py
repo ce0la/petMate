@@ -18,15 +18,18 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic.base import TemplateView
-# import petlisting.views
+import petlisting.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('allauth.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', TemplateView.as_view(template_name='index.html'), name='index'),
-    # path('', petlisting.views.index, name='index'),
-    # path('', petlisting.views.about, name='about'),
-    # path('', petlisting.views.contact, name='contact')
+    # path('', TemplateView.as_view(template_name='index.html'), name='index'),
+    path('', petlisting.views.index, name='index'),
+    path('petdetails/', petlisting.views.petdetails, name='petdetails'),
+    path('petpreview/', petlisting.views.petpreview, name='petpreview'),
+    # path('', TemplateView.as_view(template_name=') index, name='index'),
+    # path('petdetails', TemplateView.as_view(template_name='petdetails.html'), name='petdetails'),
+    # path('petpreview', TemplateView.as_view(template_name='petpreview.html'), name='petpreview')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
