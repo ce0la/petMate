@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
+
+body {
+  overflow-x: hidden; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none;
+  opacity: .4; }
+
+.row1 {
+  background-image: url("https://res.cloudinary.com/ebugo/image/upload/v1577224203/petmate/h21kyds8vcas10sarmk5.jpg");
+  background-size: cover; }
+  .row1 .container {
+    background-color: rgba(0, 0, 0, 0.89);
+    color: white; }
+    .row1 .container header {
+      background-color: white;
+      color: #05CCCC;
+      padding: 20px 7%; }
+      .row1 .container header #navButton {
+        display: inline-block;
+        width: 30px;
+        margin-right: 20px;
+        cursor: pointer; }
+        .row1 .container header #navButton .stick {
+          height: 3px;
+          margin-top: 5px;
+          background-color: #05CCCC; }
+      .row1 .container header span.logo i {
+        font-size: 30px; }
+      .row1 .container header span.logo a {
+        color: #05CCCC;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 29px; }
+      .row1 .container header span.search {
+        float: right;
+        margin-top: 5px;
+        cursor: pointer; }
+        .row1 .container header span.search i {
+          font-size: 25px;
+          font-weight: lighter; }
+      .row1 .container header nav {
+        display: none;
+        padding-top: 20px; }
+        .row1 .container header nav a {
+          color: #05CCCC;
+          font-size: 20px;
+          margin-bottom: 10px;
+          display: block; }
+    .row1 .container .row--1 {
+      padding: 30px 0 30px 7%; }
+      .row1 .container .row--1 .pet_details h3 {
+        font-size: 35px;
+        margin: 20px 0;
+        text-align: center; }
+      .row1 .container .row--1 .pet_details aside {
+        font-size: 25px; }
+        .row1 .container .row--1 .pet_details aside p {
+          color: #05CCCC; }
+          .row1 .container .row--1 .pet_details aside p span {
+            color: white; }
+      .row1 .container .row--1 .pet_img {
+        margin: 30px 0; }
+        .row1 .container .row--1 .pet_img img {
+          width: 100%;
+          height: auto; }
+      .row1 .container .row--1 button {
+        border: none;
+        background-color: #05CCCC;
+        font-size: 20px;
+        padding: 8px 50px;
+        color: white;
+        border-radius: 5px;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer; }
+      .row1 .container .row--1 button:hover {
+        opacity: .7; }
+
+.footer {
+  margin: 50px 0;
+  padding: 0 5%; }
+  .footer_container h3 {
+    color: #05CCCC;
+    font-size: 25px; }
+  .footer_container p {
+    font-weight: bold;
+    margin-top: 20px; }
+  .footer_container .policy {
+    margin: 30px 0; }
+  .footer_footer {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold; }
+
+@media screen and (min-width: 760px) {
+  header {
+    background-color: transparent !important; }
+    header .logo a {
+      color: white !important;
+      font-size: 30px !important; }
+    header #navButton,
+    header .search {
+      display: none !important; }
+    header #nav {
+      display: block;
+      float: right;
+      padding-top: 10px; }
+      header #nav a {
+        display: inline-block !important;
+        margin-left: 30px; }
+  .row1 .row--1 article {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .row1 .row--1 article .pet_details h3 {
+      text-align: left !important; }
+    .row1 .row--1 article .pet_details p {
+      margin-bottom: 20px !important; }
+    .row1 .row--1 article .pet_img {
+      text-align: center; }
+      .row1 .row--1 article .pet_img img {
+        box-shadow: 5px 5px 5px white;
+        border-radius: 50%;
+        border: 2px solid white;
+        width: 300px !important;
+        height: 300px !important;
+        object-fit: cover; }
+  .footer_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px; }
+    .footer_container .policy {
+      margin-top: 0; }
+    .footer_container .contact {
+      text-align: right; } }

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -w css/sass/pet-preview.scss -o ./css"
+    "scss-pet_preiview": "node-sass -w css/sass/pet-preview.scss -o ./css",
+    "scss-index": "node-sass -w css/sass/main.scss -o ./css",
+    "scss-pet_details": "node-sass -w css/sass/pet-details.scss -o ./css"
   },
   "repository": {
     "type": "git",
