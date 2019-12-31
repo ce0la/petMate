@@ -10,41 +10,54 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'petlisting/css/main.css' %}">
+
+    {% block headlinks %}
+        <!-- To add more link/meta tags in other files, enter them inside these surrounding Django "block headlinks" tags
+            N.B: Only for files extending base.html -->
+    {% endblock %}
+
     <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
-    <main>
-        <section class="row1">
-            <div class="container">
-                {% block header %}
-                <header>
-                    <div id="navButton">
-                        <div class="stick"></div>
-                        <div class="stick"></div>
-                        <div class="stick"></div>
-                    </div>
-                    <span class="logo"><i class="fa fa-paw"> </i><a href="{% url 'index' %}"> PetMate</a>
-                    </span>
-                    <span class="search">
-                        <i class="fa fa-search"></i>
-                    </span>
-                    <nav id="nav">
-                        <a href="{% url 'petdetails' %}">Policy</a>
-                        <a href="{% url 'petpreview' %}">About Us</a>
-                        <a href="#">Contact us</a>
-                    </nav>
-                </header>
-                {% endblock %}
-            </div>
-        </section>
 
-        {% block content %}
+    {% block content %}
+
+        {% block header %}
+            <header>
+                <div id="navButton">
+                    <div class="stick"></div>
+                    <div class="stick"></div>
+                    <div class="stick"></div>
+                </div>
+                <span class="logo"><i class="fa fa-paw"> </i><a href="{% url 'index' %}"> PetMate</a>
+                </span>
+                <span class="search">
+                    <i class="fa fa-search"></i>
+                </span>
+                <nav id="nav">
+                    <a href="{% url 'petdetails' %}">Pet Details</a>
+                    <a href="{% url 'petpreview' %}">Pet Preview</a>
+                    <a href="#">Contact us</a>
+                </nav>
+            </header>
+
+            <!-- If a different header is to be used, put it inside these surrounding Django "block header" tags
+                N.B: Only for files extending base.html -->
+
         {% endblock %}
 
-    </main>
+        <!-- Enter main page contents here.
+                N.B: Only for files extending base.html -->
+
+    {% endblock %}
+
 </body>
 <script src="{% static 'petlisting/js/main.js' %}"></script>
 
+{% block scripts %}
+    <!-- To add more scripts tags in other files, enter them inside these surrounding Django "block scripts" tags
+            N.B: Only for files extending base.html -->
+{% endblock %}
 
 </html>

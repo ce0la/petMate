@@ -29,6 +29,7 @@ urlpatterns = [
     path('', petlisting.views.index, name='index'),
     path('petdetails/', petlisting.views.petdetails, name='petdetails'),
     path('petpreview/', petlisting.views.petpreview, name='petpreview'),
+    path('petlisting/', petlisting.views.petlisting, name='petlisting'),
     # path('', TemplateView.as_view(template_name=') index, name='index'),
     # path('petdetails', TemplateView.as_view(template_name='petdetails.html'), name='petdetails'),
     # path('petpreview', TemplateView.as_view(template_name='petpreview.html'), name='petpreview')

@@ -9,3 +9,6 @@ def petdetails(request):
 
 def petpreview(request):
     return render(request, 'petpreview.html')
+
+def petlisting(request):
+    return render(request, 'petlisting.html')

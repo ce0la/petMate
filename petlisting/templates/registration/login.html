@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %} Login {% endblock %}
+{% block title %}Login{% endblock %}
 
 {% block content %}
+
+  {% block header %}
+    {{block.super}}
+  {% endblock %}
+
 <h2>Login</h2>
 <br>
 <form method="post">

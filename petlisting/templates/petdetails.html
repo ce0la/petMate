@@ -1,38 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pet Details | PetMate</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/pet-details.css">
-</head>
+{% block title %}Pet Details | PetMate{% endblock %}
 
-<body>
+
+{% block headlinks %}
+    <link rel="stylesheet" href="{% static 'css/pet-details.css' %}">
+{% endblock %}
+    
+
+{% block content %}
     <main>
         <section class="row1">
             <div class="container">
-                <header>
-                    <div id="navButton">
-                        <div class="stick"></div>
-                        <div class="stick"></div>
-                        <div class="stick"></div>
-                    </div>
-                    <span class="logo"><i class="fa fa-paw"> </i><a href="index.html"> PetMate</a>
-                    </span>
-                    <span class="search">
-                        <i class="fa fa-search"></i>
-                    </span>
-                    <nav id="nav">
-                        <a href="#">Policy</a>
-                        <a href="#">About Us</a>
-                        <a href="#">Contact us</a>
-                    </nav>
-
-                </header>
+                
+                {% block header %}
+                    {{ block.super }}
+                {% endblock %}
+                    
                 <section class="row--1">
                     <article>
                         <div class="pet_details">
@@ -46,7 +31,7 @@
                             </aside>
                         </div>
                         <div class="pet_img">
-                            <img src="img/dog1.jpg" alt="">
+                            <img src="https://res.cloudinary.com/ebugo/image/upload/v1577224169/petmate/ueayioss5wbzurteynwz.jpg" alt="">
                         </div>
                     </article>
                     <button id="pair">Pair</button>
@@ -74,8 +59,8 @@
             </div>
         </section>
     </main>
-</body>
-<script src="js/main.js"></script>
-<script src="js/pet_details.js"></script>
+{% endblock %}
 
-</html>
+{% block scripts %}
+    <script src="{% static 'petlisting/js/petdetails.js' %}"></script>
+{% endblock %}

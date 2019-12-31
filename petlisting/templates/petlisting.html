@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Pet Listing | PetMate{% endblock %}
+
+{% block headlinks %}
+    <link rel="stylesheet" href="{% static 'css/pet-preview.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <section class="row1">
+        <div class="container">
+
+            {% block header %}
+                {{ block.super }}
+            {% endblock %}
+
+            <section class="row-2">
+                <img src="{% static ' ' %}" alt="Pet image">
+            </section>
+        </div>
+    </section>
+
+
+    <section class="row2">
+        <div class="p_details">
+            {% if user.is_authenticated %}
+                <br><br><br>
+                <h1>Hello {{user.username}}</h1>
+
+                <form action="" method="POST">
+            
+                </form>
+            {% else %}
+                <h2>You are not logged in!</h2>
+                <p><a href="{% url 'account_signup' %}">Register</a></p>
+                <p><a href="{% url 'account_login' %}">Login</a></p>
+                <p><a href="{% provider_login_url 'google' %}"></a>Login with Gmail</p>
+            {% endif %}            
+        </div>
+        <div id="btn-cont"><a href="{% url 'petdetails' %}">Pair with Pet</a></div>
+    </section>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'petlisting/js/petpreview.js' %}"></script>
+{% endblock %}

@@ -32,6 +32,6 @@ petsContainer.forEach((pets, index)=>{
     localStorage.setItem("petLocation", petLocation)
     localStorage.setItem("petGender", petGender)
     localStorage.setItem("petStatus", petStatus)
-    location.assign('pet-preview.html')
+    location.assign('petpreview.html')
   });
 })
