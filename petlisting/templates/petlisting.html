@@ -33,6 +33,7 @@
                 <form action="" method="POST">
             
                 </form>
+                <p><a href="{% url 'account_logout' %}">Logout</a></p>
             {% else %}
                 <h2>You are not logged in!</h2>
                 <p><a href="{% url 'account_signup' %}">Register</a></p>

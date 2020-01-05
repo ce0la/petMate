@@ -22,14 +22,21 @@ import petlisting.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # urls for user register and login authentication
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('allauth.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    # path('rest_auth/', include('rest_auth.urls')),
+
+    # urls for API calls
+    path('', include('petlisting.urls')),
+
     # path('', TemplateView.as_view(template_name='index.html'), name='index'),
-    path('', petlisting.views.index, name='index'),
-    path('petdetails/', petlisting.views.petdetails, name='petdetails'),
-    path('petpreview/', petlisting.views.petpreview, name='petpreview'),
-    path('petlisting/', petlisting.views.petlisting, name='petlisting'),
+    # path('', petlisting.views.index, name='index'),
+    # path('petdetails/', petlisting.views.petdetails, name='petdetails'),
+    # path('petpreview/', petlisting.views.petpreview, name='petpreview'),
+    # path('petlisting/', petlisting.views.petlisting, name='petlisting'),
     # path('', TemplateView.as_view(template_name=') index, name='index'),
     # path('petdetails', TemplateView.as_view(template_name='petdetails.html'), name='petdetails'),
     # path('petpreview', TemplateView.as_view(template_name='petpreview.html'), name='petpreview')
