@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+# import django.middleware.security.SecurityMiddleware
 from dotenv import load_dotenv
 import cloudinary
 
@@ -33,16 +34,19 @@ SECRET_KEY = os.getenv("MAIN_APP_SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '7a8643b2.ngrok.io',
     'localhost',
+    
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    # Local Apps (User apps created in the project)
     'petlisting.apps.PetlistingConfig',
     'accounts.apps.AccountsConfig',
+
+    # Django Apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,9 +54,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+
+    # Third-party Apps
     'rest_framework',
+    'rest_framework.authtoken',
     # 'rest_auth',
-    # 'rest_framework.authtoken',
     # 'rest_auth.registration',
 
     'allauth',
@@ -125,6 +131,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.BCryptPasswordHasher',
+]
+
 
 # API settings
 REST_FRAMEWORK = {
@@ -132,7 +146,23 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    ],
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+
+    'DEFAULT_THROTTLE_CLASSES': (
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+        'rest_framework.throttling.ScopedRateThrottle',
+    ),
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '60/minute',
+        'user': '100/minute',
+        'petlisting': '1000/day',
+        'accounts': '1000/day',
+    },
 }
 
 # Internationalization

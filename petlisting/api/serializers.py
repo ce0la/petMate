@@ -7,5 +7,11 @@ class PetSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Petlisting
-        fields = ('pet', 'name', 'breed', 'gender', 'location', 'about')
+        fields = ('pet', 'name', 'breed', 'gender', 'location', 'about', 'interested_pets')
         # exclude = ('date_listed',)
+
+class PetImageSerializer(serializers.Serializer):
+    
+    class Meta:
+        model = Petlisting
+        fields = ('pet_image',)
