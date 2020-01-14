@@ -35,7 +35,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    
+    '3.15.209.178',
 ]
 
 
@@ -101,16 +101,7 @@ WSGI_APPLICATION = 'petmate.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'petmatedb',
-        'USER': 'postgres',
-        'PASSWORD': '@dmin1234',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+DATABASES = os.getenv("DB_DETAILS")
 
 
 # Password validation
