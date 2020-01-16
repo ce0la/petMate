@@ -7,6 +7,7 @@ db.sqlite3
 /media
 /static
 templates-test
+uwsgi.ini
 
 .env
 .venv
