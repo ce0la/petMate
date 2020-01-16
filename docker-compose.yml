@@ -4,9 +4,9 @@ services:
   db:
     image: postgres
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=@dmin1234
-      - POSTGRES_DB=petmatedb
+      - POSTGRES_USER='postgres'
+      - POSTGRES_PASSWORD='@dmin1234'
+      - POSTGRES_DB='petmatedb'
     expose:
       - "5432"
   web:
