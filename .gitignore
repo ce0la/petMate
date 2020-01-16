@@ -8,6 +8,7 @@ db.sqlite3
 /static
 templates-test
 uwsgi.ini
+venv.sh
 
 .env
 .venv
