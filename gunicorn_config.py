@@ -11,5 +11,5 @@ bind = '0.0.0.0:8000'
 backlog = 2048
 accesslog = '-'
 errorlog = '-'
-user = 'ce0la'
-group = 'sudo'
+# user = 'ce0la'
+# group = 'sudo'
