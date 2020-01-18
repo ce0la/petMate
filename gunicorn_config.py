@@ -12,4 +12,4 @@ backlog = 2048
 accesslog = '-'
 errorlog = '-'
 user = 'ce0la'
-group = 'ce0la'
+group = 'sudo'
