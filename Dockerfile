@@ -25,14 +25,14 @@
 
 FROM python:3
 
-RUN apk --update add \
-    build-base \
-    postgresql \
-    postgresql-dev \
-    libpq \
-    # pillow dependencies
-    jpeg-dev \
-    zlib-dev
+# RUN apk --update add \
+#     build-base \
+#     postgresql \
+#     postgresql-dev \
+#     libpq \
+#     # pillow dependencies
+#     jpeg-dev \
+#     zlib-dev
 
 RUN mkdir /petmate-docker
 WORKDIR /petmate-docker
@@ -44,3 +44,5 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 
 COPY . /petmate-docker/
+
+EXPOSE 8000
