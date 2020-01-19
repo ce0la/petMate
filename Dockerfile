@@ -15,7 +15,7 @@ RUN pip install -r requirements.txt
 
 # running server
 EXPOSE 8000
-CMD ["gunicorn", "-c", "gunicorn_config.py", "wsgi:get_wsgi_application"]
+CMD ["gunicorn", "-c", "./petmate/wsgi.py", "wsgi:get_wsgi_application"]
 
 
 # COPY . /petmate-docker/
