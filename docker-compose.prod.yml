@@ -5,7 +5,7 @@ services:
     restart: on-failure
     # env_file:
     #   - ./.env
-    command: gunicorn --bind 0.0.0.0:8080 dockerizedpetmate.wsgi
+    command: gunicorn --bind 0.0.0.0:8080 petmate.wsgi:petmate
     ports:
       - "8080:8080"
     depends_on:
