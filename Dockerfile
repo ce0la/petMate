@@ -45,4 +45,4 @@ COPY . /petmate-docker/
 
 EXPOSE 8000
 
-RUN gunicorn --bind 0.0.0.0:8000 petmate.wsgi
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "petmate.wsgi"]
