@@ -42,7 +42,7 @@ WORKDIR /petmate-docker
 COPY requirements.txt /petmate-docker/
 RUN pip install -r requirements.txt
 COPY . /petmate-docker/
-RUN gunicorn --bind 0.0.0.0:8000 petmate.wsgi
-
 
 EXPOSE 8000
+
+RUN gunicorn --bind 0.0.0.0:8000 petmate.wsgi
