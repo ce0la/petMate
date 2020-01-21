@@ -18,6 +18,8 @@ ENV/
 env.bak/
 venv.bak/
 
+petmate-venv
+.vscode
 
 # CakePHP 3
 
