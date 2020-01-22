@@ -16,7 +16,7 @@ import cloudinary.uploader
 class UploadView(generics.CreateAPIView):
     queryset = Petlisting.objects.all()
     serializer_class = serializers.PetImageSerializer
-    permission_classes = (IsAuthenticated, )
+    # permission_classes = (IsAuthenticated, )
 
     parser_classes = (
         MultiPartParser,
@@ -39,13 +39,13 @@ class UploadView(generics.CreateAPIView):
 class PetListView(generics.ListAPIView):
     queryset = Petlisting.objects.all()
     serializer_class = serializers.PetSerializer
-    permission_classes = (IsAuthenticated, )
+    # permission_classes = (IsAuthenticated, )
 
 
 class PetCreateView(generics.CreateAPIView):
     queryset = Petlisting.objects.all()
     serializer_class = serializers.PetSerializer
-    permission_classes = (IsAuthenticated, )
+    # permission_classes = (IsAuthenticated, )
 
     def create(self, request, *args, **kwargs):
         super(PetCreateView, self).create(request, *args, **kwargs)
@@ -64,7 +64,7 @@ class PetCreateView(generics.CreateAPIView):
 class PetDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Petlisting.objects.all()
     serializer_class = serializers.PetSerializer
-    permission_classes = (IsAuthenticated, )
+    # permission_classes = (IsAuthenticated, )
 
     def retrieve(self, request, *args, **kwargs):
         super(PetDetailView, self).retrieve(request, *args, **kwargs)
