@@ -46,7 +46,7 @@ Go to `localhost:8000` or `127.0.0.1:8000` to confirm that the server is up and 
 
 /api/v1/create_pet - To create pet
 
-/api/v1/edit_pet - To edit pet details
+/api/v1/edit_pet/<int:pk> - To edit pet details
 
 /api/v1/remove_pet - To remove pet
 
