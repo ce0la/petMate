@@ -36,7 +36,6 @@ Go to `localhost:8000` or `127.0.0.1:8000` to confirm that the server is up and 
 
 /accounts/api/v1/create_user/ - To create a user
 
-/accounts/api/v1/api_token_auth/ - To edit user details
 
 ### Pet APIs
 
@@ -49,7 +48,8 @@ Go to `localhost:8000` or `127.0.0.1:8000` to confirm that the server is up and 
 /api/v1/upload_pet_image/ - To upload a pet image to cloudinary
 
 **Ensure you are signed in to access the create, edit and delete APIs.**
-Sign in at /accounts/signup/
+Sign up at `/accounts/signup/`
+Sign in at `/accounts/login/`
 
 
 
