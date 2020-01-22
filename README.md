@@ -42,13 +42,13 @@ Go to `localhost:8000` or `127.0.0.1:8000` to confirm that the server is up and 
 
 ### Pet APIs
 
-/pet/api/v1/pets - To list pets
+/api/v1/pets - To list pets
 
-/pet/api/v1/create_pet - To create pet
+/api/v1/create_pet - To create pet
 
-/pet/api/v1/edit_pet - To edit pet details
+/api/v1/edit_pet - To edit pet details
 
-/pet/api/v1/remove_pet - To remove pet
+/api/v1/remove_pet - To remove pet
 
 **Ensure you are signed in to access the create, edit and delete APIs.**
 
