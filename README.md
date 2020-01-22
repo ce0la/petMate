@@ -32,11 +32,11 @@ Go to `localhost:8000` or `127.0.0.1:8000` to confirm that the server is up and 
 
 ### User APIs
 
-/accounts/api/v1/users - To list users
+/accounts/api/v1/users/ - To list users
 
-/accounts/api/v1/create_user - To create a user
+/accounts/api/v1/create_user/ - To create a user
 
-/accounts/api/v1/edit_user - To edit user details
+/accounts/api/v1/edit_user/ - To edit user details
 
 ### Pet APIs
 
