@@ -36,19 +36,17 @@ Go to `localhost:8000` or `127.0.0.1:8000` to confirm that the server is up and 
 
 /accounts/api/v1/create_user - To create a user
 
-/accounts/api/v1/remove_user - To delete a user
-
 /accounts/api/v1/edit_user - To edit user details
 
 ### Pet APIs
 
-/api/v1/pets - To list pets
+/api/v1/pets/ - To list pets
 
-/api/v1/create_pet - To create pet
+/api/v1/create_pet/ - To create pet
 
-/api/v1/edit_pet/<int:pk> - To edit pet details
+/api/v1/edit_pet/<int:pk>/ - To edit pet details
 
-/api/v1/remove_pet - To remove pet
+/api/v1/upload_pet_image/ - To remove pet
 
 **Ensure you are signed in to access the create, edit and delete APIs.**
 
